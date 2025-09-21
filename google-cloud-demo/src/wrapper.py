@@ -1,4 +1,7 @@
-from .config import GOOGLE_API_KEY, GEMINI_API_KEY
+from google import genai
 
-print("Google API KEY:", GOOGLE_API_KEY)
-print("Gemini API KEY:", GEMINI_API_KEY)
+client = genai.Client()
+
+response = client.models.generate_content(
+    model="gemini-2.5-flash", contents=""
+)
