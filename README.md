@@ -1,4 +1,4 @@
-# Google-Cloud-Demo - Competitive Benchmarking Generator
+# Google-Cloud-Demo: Competitive-Benchmarking-Generator
 
 This is a demo on how to use the Google Cloud AI Studio. 
 
