@@ -3,233 +3,214 @@
 Example Response for prompt 1:
 ```yaml
 {
-  "Google": {
-    "Strengths": [
-      "Dominant Search and Ad Ecosystem: Unparalleled reach and data for advertising through Google Search and YouTube, directly competing with Meta's ad revenue.",
-      "Android OS & Ecosystem: Controls the largest mobile operating system, a critical platform for Meta's Family of Apps (FoA), giving them significant influence over app distribution and developer policies.",
-      "YouTube's Video Leadership: A massive and growing platform for video content and advertising, directly competing with Instagram Reels and Facebook Video for user attention and creator engagement.",
-      "AI Prowess: Significant investment and leadership in AI, crucial for ad targeting, content moderation, and potentially future computing paradigms, which could enhance their own products and services.",
-      "Cloud Computing (GCP): Diversified revenue streams and robust infrastructure, providing scale and resilience.",
-      "Privacy Sandbox Initiatives: Developing privacy-preserving ad technologies that could become industry standards, potentially challenging Meta's current data-centric ad model."
-    ],
-    "Weaknesses": [
-      "Regulatory Scrutiny: Faces intense antitrust pressure globally, particularly concerning its search and ad tech dominance, which could lead to forced divestitures or operational changes.",
-      "Social Networking Failures: Repeated inability to establish a successful social network, leaving the social graph largely to Meta.",
-      "Hardware Ambitions: Mixed success in consumer hardware outside of Pixel phones (e.g., Google Glass, Google Daydream VR), not yet a direct threat to Meta's Reality Labs hardware in VR/AR.",
-      "Dependence on Ads: Despite diversification, advertising remains the vast majority of Google's revenue, making it susceptible to ad market fluctuations.",
-      "Data Collection Perception: Despite privacy initiatives, Google is still widely perceived as a major collector of user data, facing similar public scrutiny to Meta."
-    ],
-    "Opportunities": [
-      "AI Integration: Further leverage AI across all products to enhance user experience, ad effectiveness, and develop new features, potentially outpacing Meta's AI advancements.",
-      "Expanding Android's Influence: Deeper integration and control over the mobile ecosystem, potentially influencing app distribution, data access, and developer requirements, which could impact Meta's FoA.",
-      "Next-Gen Search/Discovery: Innovate beyond traditional search to conversational AI and other discovery mechanisms, potentially capturing user intent earlier than social platforms.",
-      "Privacy-Centric Ad Solutions: Develop ad solutions that balance personalization with user privacy, potentially setting new industry standards that Meta would need to adapt to.",
-      "VR/AR Ecosystem (less direct): While not a direct hardware threat, their software expertise could allow them to build services or an OS that competes with Meta's Horizon OS."
-    ],
-    "Risks": [
-      "Antitrust Penalties: Significant fines or structural remedies imposed by regulators, impacting profitability and market position.",
-      "Ad-Blocking and Privacy Changes: Continued industry shifts towards greater user privacy and control (e.g., cookie deprecation) could degrade ad effectiveness and revenue.",
-      "Competition from AI Chatbots: Emergence of new AI search paradigms could disrupt Google's core search business.",
-      "Economic Downturn: Reduced ad spending during economic slowdowns directly impacts their core business.",
-      "Brand Perception: Negative public sentiment regarding data collection practices or monopolistic behavior."
-    ]
-  },
-  "Apple": {
-    "Strengths": [
-      "Premium Brand & Ecosystem Lock-in: High customer loyalty driven by integrated hardware, software, and services (iOS, Mac, Apple Watch), creating a formidable walled garden.",
-      "Strong Privacy Stance: Positioned as a privacy leader, resonating with consumers and regulators. Their privacy policies (e.g., App Tracking Transparency - ATT) directly impact Meta's ad business.",
-      "Hardware Expertise: Unmatched design and manufacturing prowess, crucial for consumer electronics, now extended to spatial computing with Vision Pro, directly competing with Reality Labs.",
-      "App Store Dominance: Controls access to a vast and lucrative app market on iOS, dictating terms and policies for Meta's FoA apps.",
-      "Financial Strength: Enormous cash reserves and profitability provide resources for R&D, market entry, and strategic acquisitions.",
-      "Growing Services Revenue: Diversifying beyond hardware with high-margin services (Apple Music, iCloud, Apple TV+, Apple Pay), strengthening their ecosystem."
-    ],
-    "Weaknesses": [
-      "Closed Ecosystem Criticisms: While a strength, the tightly controlled ecosystem faces increasing antitrust scrutiny regarding App Store fees and restrictions, which could lead to forced changes.",
-      "High Price Point: Limits market penetration compared to Android devices, affecting Meta's reach on certain hardware segments.",
-      "Social Media & AI Lag: Historically weak in social networking and their AI (Siri) trails competitors like Google Assistant and ChatGPT, areas where Meta has significant investment.",
-      "Advertising Business (Relative to Meta/Google): While growing (e.g., App Store Search Ads), their ad platform is not as sophisticated or pervasive as Meta's or Google's.",
-      "Reliance on iPhone Sales: Although services are growing, iPhone sales remain a significant revenue driver and the primary gateway to their ecosystem."
-    ],
-    "Opportunities": [
-      "Spatial Computing/AR/VR: Vision Pro positions them as a direct, high-end competitor to Meta's Reality Labs, potentially defining the next computing platform and controlling its app ecosystem.",
-      "Further Data Privacy Enhancements: Can continue to leverage privacy as a differentiator, potentially forcing further industry changes that benefit Apple's platform control and nascent ad business.",
-      "Expansion of Services: Continued growth in high-margin services, further diversifying revenue and deepening customer lock-in.",
-      "Health & Wellness: Deeper integration of health monitoring and services, leveraging their ecosystem for personal data.",
-      "Automotive (Project Titan): Potential entry into a massive new market, diversifying their portfolio significantly."
-    ],
-    "Risks": [
-      "Regulatory Scrutiny: Intense antitrust focus on App Store policies and ecosystem control, potentially leading to forced changes in business practices and revenue models.",
-      "Supply Chain Vulnerabilities: Reliance on a global supply chain and specific manufacturing regions, susceptible to geopolitical events and disruptions.",
-      "Competition in New Markets: Heavy competition in AR/VR/Spatial Computing from Meta and others, requiring massive investment and execution.",
-      "Innovation Stagnation: Risk of relying too much on incremental updates rather than disruptive innovation, especially as core product categories mature.",
-      "Developer Backlash: Growing discontent among developers over App Store policies and fees, potentially leading to platform fragmentation or regulatory action.",
-      "Economic Downturn: Premium product pricing makes them vulnerable to reduced consumer spending during economic slowdowns."
-    ]
-  }
-}
-```
-
-Example Response for prompt 2:
-```yaml
-{
-  "presentation_title": "Meta: Competitor Landscape Analysis (Google & Apple)",
   "slides": [
     {
-      "slide_title": "Meta: Company Overview",
+      "slide_title": "Google Business Analysis: Overview & Key Stats",
       "content": {
-        "description": "Meta's operations center on its Family of Apps (FoA), which includes social media platforms like Facebook, Instagram, and WhatsApp for connecting people and providing advertising services, and its Reality Labs (RL) segment, which develops hardware, software, and content for virtual and mixed reality, including its metaverse ambitions. The company generates most of its revenue through advertising on its social platforms, using user data and targeted ads to connect businesses with consumers.",
-        "key_stats": {
-          "market_cap_estimate": "~$1.2 Trillion (as of Q1 2024)",
-          "revenue_2023_estimate": "~$134.9 Billion",
-          "net_income_2023_estimate": "~$39.1 Billion",
-          "MAU_FoA_Q4_2023": "3.19 Billion (Monthly Active People across FoA)",
-          "revenue_breakdown": {
-            "advertising": "97.8% (~$131.9 Billion)",
-            "reality_labs": "2.2% (~$3.1 Billion)"
+        "overview": "Alphabet Inc. (Google) is a multinational technology conglomerate dominating internet-related services and products, including search, advertising, cloud computing, software, and hardware. It maintains market leadership across several critical tech sectors, driving innovation and global connectivity.",
+        "key_stats": [
+          {
+            "metric": "Market Capitalization",
+            "value": "~$2 Trillion (approx. Q1 2024)"
+          },
+          {
+            "metric": "Annual Revenue (FY2023)",
+            "value": "~$305 Billion (approx.)"
+          },
+          {
+            "metric": "Net Income (FY2023)",
+            "value": "~$74 Billion (approx.)"
+          },
+          {
+            "metric": "Search Engine Market Share",
+            "value": ">90% (Global Desktop & Mobile)"
+          },
+          {
+            "metric": "Android OS Market Share",
+            "value": ">70% (Global Mobile OS)"
+          },
+          {
+            "metric": "YouTube Monthly Active Users",
+            "value": ">2.7 Billion"
           }
-        }
+        ]
       }
     },
     {
-      "slide_title": "Competitor Analysis: Google (Alphabet Inc.) Overview",
+      "slide_title": "SWOT Analysis: Strengths",
+      "content": [
+        {
+          "point": "Market Dominance & Brand Recognition",
+          "details": "Unparalleled leadership in Search, Android, YouTube, and Chrome. One of the world's most valuable and recognized brands."
+        },
+        {
+          "point": "Innovation Engine",
+          "details": "Strong R&D investment, leading in AI (Gemini), quantum computing, and autonomous driving (Waymo)."   
+        },
+        {
+          "point": "Global Ecosystem & Network Effects",
+          "details": "Vast user base across multiple interconnected platforms (Search, Maps, Gmail, YouTube) creating high switching costs."
+        },
+        {
+          "point": "Financial Strength",
+          "details": "Robust cash flow and profitability supporting aggressive investments, acquisitions, and talent retention."
+        },
+        {
+          "point": "Data Advantage",
+          "details": "Immense proprietary data across services fuels AI development and advertising optimization."
+        }
+      ]
+    },
+    {
+      "slide_title": "SWOT Analysis: Weaknesses",
+      "content": [
+        {
+          "point": "Advertising Dependence",
+          "details": "Over-reliance on ad revenue (over 80%) makes the company vulnerable to economic downturns and ad market shifts."
+        },
+        {
+          "point": "Regulatory Scrutiny",
+          "details": "Constant anti-trust investigations, data privacy concerns, and potential regulatory actions globally."
+        },
+        {
+          "point": "Product Graveyard & Lack of Focus",
+          "details": "History of launching and discontinuing promising products ('Google Graveyard'), impacting user trust and developer adoption."
+        },
+        {
+          "point": "Bureaucracy & Silos",
+          "details": "Increasing organizational size can lead to slower decision-making and internal competition between divisions."
+        },
+        {
+          "point": "Hardware Integration Gap",
+          "details": "Despite efforts, hardware ecosystem (Pixel, Nest) lacks the seamless integration and market share of competitors like Apple."
+        }
+      ]
+    },
+    {
+      "slide_title": "SWOT Analysis: Opportunities",
+      "content": [
+        {
+          "point": "AI & Machine Learning Leadership",
+          "details": "Further integration of advanced AI (e.g., Gemini) across all products and new AI-first offerings to redefine user experiences."
+        },
+        {
+          "point": "Cloud Computing Market Expansion",
+          "details": "Aggressively expanding Google Cloud's market share in enterprise solutions, hybrid cloud, and AI-powered services."
+        },
+        {
+          "point": "Emerging Markets Penetration",
+          "details": "Tailoring products and services for underserved regions to capture new user bases and advertising revenue."
+        },
+        {
+          "point": "Hardware Ecosystem Enhancement",
+          "details": "Deepening integration and user experience across Pixel, Nest, Fitbit to create a more compelling, cohesive ecosystem."
+        },
+        {
+          "point": "New Vertical Growth",
+          "details": "Strategic expansion into health tech, sustainable energy solutions, and advanced robotics leveraging core AI capabilities."
+        }
+      ]
+    },
+    {
+      "slide_title": "SWOT Analysis: Risks",
+      "content": [
+        {
+          "point": "Anti-Trust & Regulatory Enforcement",
+          "details": "Potential for significant fines, forced divestitures, and operational restrictions from global anti-trust bodies."
+        },
+        {
+          "point": "Intense Competition",
+          "details": "Threats from Microsoft (OpenAI, Azure), Apple (ecosystem), Amazon (Cloud, Ads), Meta (social, metaverse), and specialized AI startups."
+        },
+        {
+          "point": "Data Privacy & Security Concerns",
+          "details": "Escalating user and governmental demands for data protection; high financial and reputational risk from breaches or misuse."
+        },
+        {
+          "point": "Economic Downturns",
+          "details": "Reduced ad spending during recessions directly impacts the primary revenue stream, affecting profitability."
+        },
+        {
+          "point": "AI Ethics & Misinformation",
+          "details": "Challenges in managing AI bias, deepfakes, and ensuring responsible AI development and deployment, risking public backlash."
+        }
+      ]
+    },
+    {
+      "slide_title": "Strategic Recommendations for Google",
+      "content": [
+        {
+          "recommendation": "Accelerate AI-First Transformation",
+          "action": "Integrate advanced AI (Gemini) across all core products (Search, Workspace, Cloud, Android) to redefine user experience and maintain competitive advantage. Prioritize ethical AI development and governance."
+        },
+        {
+          "recommendation": "Aggressively Diversify Revenue Streams",
+          "action": "Expand Google Cloud's market share through industry-specific solutions and strategic partnerships. Grow subscription services (YouTube Premium, Google One) and explore new non-advertising monetization models."
+        },
+        {
+          "recommendation": "Proactive Regulatory & Policy Engagement",
+          "action": "Shift from reactive defense to proactive collaboration with regulators globally. Invest in transparency, privacy-preserving technologies, and demonstrate commitment to competitive practices."
+        },
+        {
+          "recommendation": "Strengthen Hardware-Software Ecosystem",
+          "action": "Enhance seamless interoperability and user experience across Pixel, Nest, Fitbit, and Android devices to build a cohesive ecosystem that rivals top competitors."
+        },
+        {
+          "recommendation": "Strategic M&A for Future Growth",
+          "action": "Focus acquisitions on cutting-edge AI startups, health tech innovations, and other emerging sectors that align with long-term strategic goals and offer new avenues for growth."
+        },
+        {
+          "recommendation": "Optimize Product Portfolio & Focus",
+          "action": "Implement a more disciplined approach to product launches and sunsetting. Foster a culture that rewards long-term product vision over short-term experiments to build user trust."
+        }
+      ]
+    },
+    {
+      "slide_title": "Implications of Strategic Recommendations",
       "content": {
-        "overview": "Alphabet Inc., Google's parent company, is a global technology giant focused on internet-related services and products. Its core business revolves around search, advertising, cloud computing, and various hardware and software initiatives, including Android and YouTube. Google's advertising ecosystem is Meta's primary direct competitor for ad spend and user attention.",
-        "key_stats": {
-          "market_cap_estimate": "~$2.1 Trillion (as of Q1 2024)",
-          "revenue_2023_estimate": "~$305.6 Billion",
-          "net_income_2023_estimate": "~$73.8 Billion",
-          "revenue_breakdown": {
-            "search_ads": "~56% (Google Search & other)",
-            "youtube_ads": "~10%",
-            "google_cloud": "~12%",
-            "google_other_revenue": "~9%",
-            "other_bets": "~0.5%"
+        "positive_implications": [
+          {
+            "point": "Sustained Long-Term Growth & Resilience",
+            "details": "Reduced reliance on advertising revenue fosters financial stability and opens new, high-growth market opportunities."
           },
-          "core_products": "Google Search, YouTube, Android, Chrome, Google Cloud, Google Ads"
-        }
-      }
-    },
-    {
-      "slide_title": "Google: SWOT Analysis",
-      "content": {
-        "strengths": [
-          "Dominant Search and Ad Ecosystem: Unparalleled reach and data for advertising through Google Search and YouTube, directly competing with Meta's ad revenue.",
-          "Android OS & Ecosystem: Controls the largest mobile operating system, a critical platform for Meta's Family of Apps (FoA), giving them significant influence over app distribution and developer policies.",
-          "YouTube's Video Leadership: A massive and growing platform for video content and advertising, directly competing with Instagram Reels and Facebook Video for user attention and creator engagement.",
-          "AI Prowess: Significant investment and leadership in AI, crucial for ad targeting, content moderation, and potentially future computing paradigms, which could enhance their own products and services.",
-          "Cloud Computing (GCP): Diversified revenue streams and robust infrastructure, providing scale and resilience.",
-          "Privacy Sandbox Initiatives: Developing privacy-preserving ad technologies that could become industry standards, potentially challenging Meta's current data-centric ad model."
-        ],
-        "weaknesses": [
-          "Regulatory Scrutiny: Faces intense antitrust pressure globally, particularly concerning its search and ad tech dominance, which could lead to forced divestitures or operational changes.",
-          "Social Networking Failures: Repeated inability to establish a successful social network, leaving the social graph largely to Meta.",
-          "Hardware Ambitions: Mixed success in consumer hardware outside of Pixel phones (e.g., Google Glass, Google Daydream VR), not yet a direct threat to Meta's Reality Labs hardware in VR/AR.",
-          "Dependence on Ads: Despite diversification, advertising remains the vast majority of Google's revenue, making it susceptible to ad market fluctuations.",
-          "Data Collection Perception: Despite privacy initiatives, Google is still widely perceived as a major collector of user data, facing similar public scrutiny to Meta."
-        ],
-        "opportunities": [
-          "AI Integration: Further leverage AI across all products to enhance user experience, ad effectiveness, and develop new features, potentially outpacing Meta's AI advancements.",
-          "Expanding Android's Influence: Deeper integration and control over the mobile ecosystem, potentially influencing app distribution, data access, and developer requirements, which could impact Meta's FoA.",
-          "Next-Gen Search/Discovery: Innovate beyond traditional search to conversational AI and other discovery mechanisms, potentially capturing user intent earlier than social platforms.",
-          "Privacy-Centric Ad Solutions: Develop ad solutions that balance personalization with user privacy, potentially setting new industry standards that Meta would need to adapt to.",
-          "VR/AR Ecosystem (less direct): While not a direct hardware threat, their software expertise could allow them to build services or an OS that competes with Meta's Horizon OS."
-        ],
-        "risks": [
-          "Antitrust Penalties: Significant fines or structural remedies imposed by regulators, impacting profitability and market position.",
-          "Ad-Blocking and Privacy Changes: Continued industry shifts towards greater user privacy and control (e.g., cookie deprecation) could degrade ad effectiveness and revenue.",
-          "Competition from AI Chatbots: Emergence of new AI search paradigms could disrupt Google's core search business.",
-          "Economic Downturn: Reduced ad spending during economic slowdowns directly impacts their core business.",
-          "Brand Perception: Negative public sentiment regarding data collection practices or monopolistic behavior."
-        ]
-      }
-    },
-    {
-      "slide_title": "Google: Strategic Recommendations for Meta",
-      "content": {
-        "recommendations": [
-          "**Double Down on Short-Form Video:** Invest heavily in Reels and Facebook Video to aggressively challenge YouTube's dominance in user attention and creator monetization.",
-          "**Strengthen AI-Driven Ad Tools:** Leverage Meta's AI expertise to enhance ad targeting and measurement capabilities, striving for superior ROI even with evolving privacy standards.",
-          "**Reduce Android Ecosystem Dependency:** Explore alternative distribution channels and browser technologies, and proactively engage with Google on policy changes impacting app functionality.",
-          "**Innovate Privacy-Enhancing Ad Tech:** Develop and promote Meta's own privacy-centric ad solutions to adapt to industry trends and mitigate Google's 'Privacy Sandbox' influence.",
-          "**Expand Cross-Platform Presence for Reality Labs:** Ensure metaverse experiences are accessible beyond Meta hardware, potentially integrating with Android ecosystem standards where beneficial."
-        ],
-        "implications": [
-          "**Ad Revenue Pressure:** Google's ad tech advancements and privacy initiatives will continue to put pressure on Meta's core revenue model, requiring constant adaptation.",
-          "**Platform Control Risk:** Android's dominant position means Google can influence Meta's FoA reach and data access, necessitating proactive engagement and diversification strategies.",
-          "**Video Content Arms Race:** The battle for video content and creator engagement will intensify, demanding significant investment from Meta.",
-          "**AI as a Core Competitive Differentiator:** Both companies see AI as central to future products and services, making AI leadership critical for Meta."
-        ]
-      }
-    },
-    {
-      "slide_title": "Competitor Analysis: Apple Overview",
-      "content": {
-        "overview": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It also sells related services. Known for its premium brand, integrated ecosystem, and strong privacy stance, Apple directly impacts Meta's ad business through policy changes and competes in hardware with Reality Labs.",
-        "key_stats": {
-          "market_cap_estimate": "~$2.6 Trillion (as of Q1 2024)",
-          "revenue_2023_estimate": "~$383.3 Billion",
-          "net_income_2023_estimate": "~$97.0 Billion",
-          "revenue_breakdown": {
-            "iphone": "~52%",
-            "services": "~22%",
-            "mac": "~7%",
-            "ipad": "~6%",
-            "wearables_home_accessories": "~10%"
+          {
+            "point": "Enhanced Competitive Advantage",
+            "details": "AI leadership and a robust cloud/hardware ecosystem solidify market position against tech giants and new entrants."
           },
-          "core_products": "iPhone, Mac, iPad, Apple Watch, AirPods, App Store, Apple Music, Apple Vision Pro"
-        }
-      }
-    },
-    {
-      "slide_title": "Apple: SWOT Analysis",
-      "content": {
-        "strengths": [
-          "Premium Brand & Ecosystem Lock-in: High customer loyalty driven by integrated hardware, software, and services (iOS, Mac, Apple Watch), creating a formidable walled garden.",
-          "Strong Privacy Stance: Positioned as a privacy leader, resonating with consumers and regulators. Their privacy policies (e.g., App Tracking Transparency - ATT) directly impact Meta's ad business.",
-          "Hardware Expertise: Unmatched design and manufacturing prowess, crucial for consumer electronics, now extended to spatial computing with Vision Pro, directly competing with Reality Labs.",
-          "App Store Dominance: Controls access to a vast and lucrative app market on iOS, dictating terms and policies for Meta's FoA apps.",
-          "Financial Strength: Enormous cash reserves and profitability provide resources for R&D, market entry, and strategic acquisitions.",
-          "Growing Services Revenue: Diversifying beyond hardware with high-margin services (Apple Music, iCloud, Apple TV+, Apple Pay), strengthening their ecosystem."
+          {
+            "point": "Mitigated Regulatory Risk",
+            "details": "Proactive engagement and diversification can reduce anti-trust scrutiny and potential fines, fostering a more favorable operating environment."
+          },
+          {
+            "point": "Improved User Trust & Brand Value",
+            "details": "Ethical AI, transparent data practices, and a cohesive product experience enhance user loyalty and public perception."
+          },
+          {
+            "point": "Increased Innovation Velocity",
+            "details": "Focused investment in AI and strategic M&A drive the development of next-generation products and services."
+          }
         ],
-        "weaknesses": [
-          "Closed Ecosystem Criticisms: While a strength, the tightly controlled ecosystem faces increasing antitrust scrutiny regarding App Store fees and restrictions, which could lead to forced changes.",
-          "High Price Point: Limits market penetration compared to Android devices, affecting Meta's reach on certain hardware segments.",
-          "Social Media & AI Lag: Historically weak in social networking and their AI (Siri) trails competitors like Google Assistant and ChatGPT, areas where Meta has significant investment.",
-          "Advertising Business (Relative to Meta/Google): While growing (e.g., App Store Search Ads), their ad platform is not as sophisticated or pervasive as Meta's or Google's.",
-          "Reliance on iPhone Sales: Although services are growing, iPhone sales remain a significant revenue driver and the primary gateway to their ecosystem."
-        ],
-        "opportunities": [
-          "Spatial Computing/AR/VR: Vision Pro positions them as a direct, high-end competitor to Meta's Reality Labs, potentially defining the next computing platform and controlling its app ecosystem.",
-          "Further Data Privacy Enhancements: Can continue to leverage privacy as a differentiator, potentially forcing further industry changes that benefit Apple's platform control and nascent ad business.",
-          "Expansion of Services: Continued growth in high-margin services, further diversifying revenue and deepening customer lock-in.",
-          "Health & Wellness: Deeper integration of health monitoring and services, leveraging their ecosystem for personal data.",
-          "Automotive (Project Titan): Potential entry into a massive new market, diversifying their portfolio significantly."
-        ],
-        "risks": [
-          "Regulatory Scrutiny: Intense antitrust focus on App Store policies and ecosystem control, potentially leading to forced changes in business practices and revenue models.",
-          "Supply Chain Vulnerabilities: Reliance on a global supply chain and specific manufacturing regions, susceptible to geopolitical events and disruptions.",
-          "Competition in New Markets: Heavy competition in AR/VR/Spatial Computing from Meta and others, requiring massive investment and execution.",
-          "Innovation Stagnation: Risk of relying too much on incremental updates rather than disruptive innovation, especially as core product categories mature.",
-          "Developer Backlash: Growing discontent among developers over App Store policies and fees, potentially leading to platform fragmentation or regulatory action.",
-          "Economic Downturn: Premium product pricing makes them vulnerable to reduced consumer spending during economic slowdowns."
-        ]
-      }
-    },
-    {
-      "slide_title": "Apple: Strategic Recommendations for Meta",
-      "content": {
-        "recommendations": [
-          "**Accelerate Reality Labs Hardware & OS Development:** Position Quest as the accessible, open-ecosystem alternative to Apple Vision Pro, focusing on widespread adoption and developer support.",
-          "**Mitigate ATT Impact:** Continue investing in Privacy-Enhancing Technologies (PETs) and AI for ad measurement (e.g., Aggregated Event Measurement, Advantage+ creative suite) to restore ad effectiveness on iOS.",
-          "**Lobby for Open Ecosystems:** Advocate actively against monopolistic app store policies and for user data portability and interoperability standards, particularly for emerging spatial computing platforms.",
-          "**Emphasize Social & AI Differentiators:** Highlight Meta's core strengths in social connection and advanced AI capabilities within its apps, areas where Apple is comparatively weaker.",
-          "**Diversify Monetization Beyond Targeted Ads:** Explore subscriptions, direct creator monetization tools, and in-metaverse commerce to reduce reliance on platform-controlled advertising."
-        ],
-        "implications": [
-          "**Significant Ad Revenue Headwinds:** Apple's privacy policies (ATT) have already cost Meta billions and will continue to challenge its core ad business model, necessitating fundamental shifts.",
-          "**Battle for the Next Computing Platform:** The Vision Pro signals a direct, high-stakes competition for leadership in spatial computing, requiring Meta to execute flawlessly with Reality Labs.",
-          "**Platform Lock-in Risk:** Apple's control over iOS and its App Store remains a critical dependency for Meta's FoA, dictating terms and limiting strategic maneuverability.",
-          "**Developer and User Perception:** Meta needs to actively build a reputation as a privacy-conscious, open platform, contrasting Apple's 'walled garden' approach."
+        "negative_implications_of_inaction": [
+          {
+            "point": "Stagnant Revenue Growth & Volatility",
+            "details": "Continued over-reliance on advertising leaves Google highly vulnerable to market shifts and economic downturns."
+          },
+          {
+            "point": "Escalated Regulatory Pressure & Penalties",
+            "details": "Inaction against anti-trust concerns could lead to significant fines, forced divestitures, or operational restrictions."
+          },
+          {
+            "point": "Loss of Competitive Edge",
+            "details": "Failure to fully capitalize on AI and cloud opportunities could see rivals gain significant market share and technological leadership."
+          },
+          {
+            "point": "Erosion of User & Developer Trust",
+            "details": "Perceived lack of data privacy, ethical AI lapses, or inconsistent product strategy could drive users and developers to competitors."
+          },
+          {
+            "point": "Missed Market Opportunities",
+            "details": "Lagging in new high-growth verticals like health tech or advanced hardware ecosystems would severely limit future expansion and relevance."
+          }
         ]
       }
     }
