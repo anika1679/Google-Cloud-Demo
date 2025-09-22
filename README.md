@@ -1,7 +1,7 @@
 # Google-Cloud-Demo
 
 Example Response for prompt 1:
-'''yaml
+```yaml
 {
   "Google": {
     "Strengths": [
@@ -67,10 +67,10 @@ Example Response for prompt 1:
     ]
   }
 }
-'''
+```
 
 Example Response for prompt 2:
-'''yaml
+```yaml
 {
   "presentation_title": "Meta: Competitor Landscape Analysis (Google & Apple)",
   "slides": [
@@ -235,4 +235,4 @@ Example Response for prompt 2:
     }
   ]
 }
-'''
+```
