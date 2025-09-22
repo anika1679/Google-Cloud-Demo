@@ -71,3 +71,6 @@ coverage.xml
 
 # Colab-specific files
 *.ipynb
+
+#Credentials
+credentials/
