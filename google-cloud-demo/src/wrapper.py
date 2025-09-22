@@ -165,7 +165,7 @@ subtitle.text = f"Created by: {company_name} Business Analyst"
 
 for slide in analysis_json["slides"]:   
     addSlide(presentation, slide["slide_title"], slide["content"])
->>>>>>> anika
+
 
 os.makedirs("powerpoints", exist_ok=True)
 presentation_name = f"{company_name}_analysis.pptx"
