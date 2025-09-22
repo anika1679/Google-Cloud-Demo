@@ -6,6 +6,19 @@ import re
 from pptx import Presentation
 from pptx.util import Inches
 
+# Helper Method to create Json responses from the AI API response
+def parseResponseData(response):
+    json_text_match = re.search(r"\{.*\}", response, re.DOTALL)
+    if json_text_match:
+        json_text = json_text_match.group(0)
+        try:
+            data = json.loads(json_text)
+            print("Parsed Successfully")
+            return data
+        except json.JSONDecodeError as e:
+            print("Warning: Not valid JSON", e) 
+            return None
+        
 # Initializes the ai client being used.
 client = genai.Client(vertexai=True, project=PROJECT_ID, location="global")
 # Gets the information of the company and its compeitors from the user
@@ -31,6 +44,8 @@ if json_text_match:
     except json.JSONDecodeError as e:
         print("Warning: Not valid JSON", e)
 
+competitor_json = parseResponseData(response_text)
+competitor_json = json.dumps(competitor_json, indent=2)
 print(competitor_json)
 
 if not competitor_json:
@@ -47,6 +62,22 @@ For each competitor, give:
 - Implications
 Format your output as JSON, with each topic as a new slide section. Make content concise and actionable"""
 
+response2 = client.models.generate_content(
+    model="gemini-2.5-flash", contents=prompt2
+)
+
+response_text2 = response2.text
+
+analysis_json = parseResponseData(response_text2)
+analysis_json = json.dumps(analysis_json, indent=2)
+print(analysis_json)
+
+if not analysis_json:
+    print("Error: could not parse data")
+    exit()
+
+
 def createPowerPoints():
     prs = Presentation()
+
 
