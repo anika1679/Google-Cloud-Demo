@@ -160,8 +160,8 @@ title_slide = presentation.slide_layouts[0]
 slide = presentation.slides.add_slide(title_slide)
 title = slide.shapes.title
 subtitle = slide.placeholders[1]
-title.text = f"{company_name} Business Analysis"
-subtitle.text = f"Created by: {company_name} Business Analyst"
+title.text = analysis_json["reportTitle"]
+subtitle.text = analysis_json["analystPersona"]
 
 for slide in analysis_json["slides"]:   
     addSlide(presentation, slide["slide_title"], slide["content"])
