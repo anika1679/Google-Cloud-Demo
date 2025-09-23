@@ -41,18 +41,23 @@ This application uses Google Cloud's Vertex AI and Gemini API to:
    ```
 
 2. **Create a virtual environment**
+   On macOS/Linux
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On macOS/Linux
+   ```
+   On Windows:
+   ```bash
+   python3 -m venv venv
    venv/scripts/activate  # On Windows
    ```
 
-3. **Install dependencies**
+4. **Install dependencies**
    ```bash
    pip install google-genai python-pptx python-dotenv pandas
    ```
 
-4. **Configure environment variables**
+5. **Configure environment variables**
 
    Create a `.env` file in the `google-cloud-demo` directory:
    ```bash
@@ -60,7 +65,7 @@ This application uses Google Cloud's Vertex AI and Gemini API to:
    GOOGLE_APPLICATION_CREDENTIALS=./credentials/service_account.json
    ```
 
-5. **Add your service account key**
+6. **Add your service account key**
 
    Place your Google Cloud service account JSON key in:
    ```
@@ -70,24 +75,28 @@ This application uses Google Cloud's Vertex AI and Gemini API to:
 ## Usage
 
 1. **Activate the virtual environment**
+   On macOS/Linux:
    ```bash
    source venv/bin/activate  # MacOS/Linux
+   ```
+   On Windows:
+   ```bash
    venv/scripts/activate  # Windows
    ```
 
-2. **Run the application**
+3. **Run the application**
    ```bash
    python -m src.wrapper
    ```
 
-3. **Follow the prompts**
+4. **Follow the prompts**
    - Enter a company name (e.g., "Apple", "Tesla", "Google")
    - Choose output format:
      - `1` for PowerPoint
      - `2` for CSV Table
      - `3` for JSON
 
-4. **Find your reports**
+5. **Find your reports**
    - PowerPoint files: `powerpoints/`
    - CSV files: `tables/`
    - JSON files: `json_output/`
