@@ -1,6 +1,113 @@
-# Google-Cloud-Demo: Competitive-Benchmarking-Generator
+# Google Cloud Demo: Competitive Benchmarking Generator
 
-This is a demo on how to use the Google Cloud AI Studio. 
+An AI-powered business analysis tool that leverages Google's Gemini 2.5 Flash model to generate comprehensive competitive benchmarking reports for any company. The application provides strategic insights through automated SWOT analysis, key statistics, and actionable recommendations.
+
+## What It Does
+
+This application uses Google Cloud's Vertex AI and Gemini API to:
+
+1. **Analyze any company** you specify
+2. **Generate comprehensive business insights** including:
+   - Company overview and key statistics
+   - Complete SWOT analysis (Strengths, Weaknesses, Opportunities, Risks)
+   - Strategic recommendations
+   - Positive and negative implications of proposed strategies
+3. **Export results** in multiple formats:
+   - **PowerPoint (.pptx)** - Professional presentation slides
+   - **CSV Table** - Structured data for analysis
+   - **JSON** - Raw data for programmatic use
+
+## Features
+
+- 🤖 Powered by Google's Gemini 2.5 Flash AI model
+- 📊 Multiple output formats (PowerPoint, CSV, JSON)
+- 🎯 Comprehensive SWOT analysis
+- 📈 Key business metrics and statistics
+- 💡 Strategic recommendations with implications
+- 🚀 Fast and automated report generation
+
+## Setup Instructions
+
+### Prerequisites
+- Python 3.8+
+- Google Cloud Project with Vertex AI enabled
+- Service account credentials with Vertex AI access
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   cd google-cloud-demo
+   ```
+
+2. **Create a virtual environment**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install google-genai python-pptx python-dotenv pandas
+   ```
+
+4. **Configure environment variables**
+
+   Create a `.env` file in the `google-cloud-demo` directory:
+   ```bash
+   PROJECT_ID=your-google-cloud-project-id
+   GOOGLE_APPLICATION_CREDENTIALS=./credentials/service_account.json
+   ```
+
+5. **Add your service account key**
+
+   Place your Google Cloud service account JSON key in:
+   ```
+   google-cloud-demo/credentials/service_account.json
+   ```
+
+## Usage
+
+1. **Activate the virtual environment**
+   ```bash
+   source venv/bin/activate
+   ```
+
+2. **Run the application**
+   ```bash
+   python -m src.wrapper
+   ```
+
+3. **Follow the prompts**
+   - Enter a company name (e.g., "Apple", "Tesla", "Google")
+   - Choose output format:
+     - `1` for PowerPoint
+     - `2` for CSV Table
+     - `3` for JSON
+
+4. **Find your reports**
+   - PowerPoint files: `powerpoints/`
+   - CSV files: `tables/`
+   - JSON files: `json_output/`
+
+## Output Examples
+
+### PowerPoint Output
+Professional presentation with 7-8 slides including:
+- Title slide with report name and analyst persona
+- Overview & Key Stats slide
+- 4 SWOT Analysis slides (Strengths, Weaknesses, Opportunities, Risks)
+- Strategic Recommendations slide
+- Implications slide
+
+### CSV Output
+Structured table with columns:
+- Section (slide title)
+- Type (Overview, Stat, Point, Positive, Negative)
+- Content (detailed information)
+
+### JSON Output
+Complete structured data in JSON format with all analysis details 
 
 Example Response from the Prompt to Gemini-2.5-Flash:
 ```yaml

@@ -3,8 +3,10 @@ import os
 from .config import GEMINI_API_KEY, GOOGLE_API_KEY, PROJECT_ID
 import json
 import re
+import sys
 from pptx import Presentation
 from pptx.util import Inches, Pt
+import pandas as pd
 
 # Helper Method to create Json responses from the AI API response
 def parseResponseData(response):
@@ -70,7 +72,14 @@ def addSlide(presentation, title, content):
 # Initializes the ai client being used.
 client = genai.Client(vertexai=True, project=PROJECT_ID, location="global")
 # Gets the information of the company and its compeitors from the user
-company_name = input("Name of a company:")
+company_name = input("Name of a company: ")
+
+# Ask user for output format
+print("\nChoose output format:")
+print("1. PowerPoint")
+print("2. CSV Table")
+print("3. JSON")
+output_choice = input("Enter your choice (1-3): ").strip()
 
 # Prompt to be used by the AI client
 prompt = f"""Think of yourself as a business analyst for {company_name}. Give:
@@ -154,23 +163,72 @@ if not analysis_json:
     print("Error: could not parse data")
     exit()
 
-presentation = Presentation()
-#Creating the title slide
-title_slide = presentation.slide_layouts[0]
-slide = presentation.slides.add_slide(title_slide)
-title = slide.shapes.title
-subtitle = slide.placeholders[1]
-title.text = analysis_json["reportTitle"]
-subtitle.text = analysis_json["analystPersona"]
+if output_choice == "1":
+    presentation = Presentation()
+    title_slide = presentation.slide_layouts[0]
+    slide = presentation.slides.add_slide(title_slide)
+    title = slide.shapes.title
+    subtitle = slide.placeholders[1]
+    title.text = analysis_json["reportTitle"]
+    subtitle.text = analysis_json["analystPersona"]
 
-for slide in analysis_json["slides"]:   
-    addSlide(presentation, slide["slide_title"], slide["content"])
+    for slide_data in analysis_json["slides"]:
+        addSlide(presentation, slide_data["slide_title"], slide_data["content"])
 
+    os.makedirs("powerpoints", exist_ok=True)
+    presentation_name = f"{company_name}_analysis.pptx"
+    file_path = os.path.join("powerpoints", presentation_name)
+    presentation.save(file_path)
+    print(f"PowerPoint saved: {presentation_name}")
 
-os.makedirs("powerpoints", exist_ok=True)
-presentation_name = f"{company_name}_analysis.pptx"
-file_path = os.path.join("powerpoints", presentation_name)
-presentation.save(file_path)
-print(f"Powerpoint saved: {presentation_name}")
-os.startfile(file_path)
+    if sys.platform == "darwin":
+        os.system(f'open "{file_path}"')
+    elif sys.platform == "win32":
+        os.startfile(file_path)
+    else:
+        os.system(f'xdg-open "{file_path}"')
+
+elif output_choice == "2":
+    rows = []
+    for slide_data in analysis_json["slides"]:
+        slide_title = slide_data["slide_title"]
+        content = slide_data["content"]
+
+        if isinstance(content, dict):
+            if "overview" in content:
+                rows.append({"Section": slide_title, "Type": "Overview", "Content": content["overview"]})
+            if "key_stats" in content:
+                for stat in content["key_stats"]:
+                    rows.append({"Section": slide_title, "Type": "Stat", "Content": f"{stat['metric']}: {stat['value']}"})
+            if "positive_implications" in content:
+                for item in content["positive_implications"]:
+                    rows.append({"Section": slide_title, "Type": "Positive", "Content": f"{item['point']}: {item['details']}"})
+            if "negative_implications_of_inaction" in content:
+                for item in content["negative_implications_of_inaction"]:
+                    rows.append({"Section": slide_title, "Type": "Negative", "Content": f"{item['point']}: {item['details']}"})
+        elif isinstance(content, list):
+            for item in content:
+                point = item.get("point") or item.get("recommendation")
+                details = item.get("details") or item.get("action")
+                rows.append({"Section": slide_title, "Type": "Point", "Content": f"{point}: {details}"})
+
+    df = pd.DataFrame(rows)
+    os.makedirs("tables", exist_ok=True)
+    csv_name = f"{company_name}_analysis.csv"
+    csv_path = os.path.join("tables", csv_name)
+    df.to_csv(csv_path, index=False)
+    print(f"CSV saved: {csv_name}")
+    print(f"\nPreview:")
+    print(df.head(10))
+
+elif output_choice == "3":
+    os.makedirs("json_output", exist_ok=True)
+    json_name = f"{company_name}_analysis.json"
+    json_path = os.path.join("json_output", json_name)
+    with open(json_path, 'w') as f:
+        json.dump(analysis_json, f, indent=2)
+    print(f"JSON saved: {json_name}")
+
+else:
+    print(f"Invalid choice '{output_choice}'. Please enter 1, 2, or 3.")
 
