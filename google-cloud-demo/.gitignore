@@ -74,6 +74,7 @@ coverage.xml
 
 #Credentials
 credentials/*
+!/credentials/.gitkeep
 
 #Powerpoints
 powerpoints/*
