@@ -45,12 +45,12 @@ This application uses Google Cloud's Vertex AI and Gemini API to:
    On macOS/Linux
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On macOS/Linux
+   source venv/bin/activate  
    ```
    On Windows:
    ```bash
    python3 -m venv venv
-   venv/scripts/activate  # On Windows
+   venv/scripts/activate  
    ```
 
 4. **Install dependencies**
@@ -79,11 +79,11 @@ This application uses Google Cloud's Vertex AI and Gemini API to:
 
    On macOS/Linux:
    ```bash
-   source venv/bin/activate  # MacOS/Linux
+   source venv/bin/activate 
    ```
    On Windows:
    ```bash
-   venv/scripts/activate  # Windows
+   venv/scripts/activate  
    ```
 
 3. **Run the application**
