@@ -77,3 +77,8 @@ credentials/
 
 #Powerpoints
 powerpoints/
+
+#Table files
+*.csv
+*.xlsx
+*.xls
