@@ -77,9 +77,12 @@ credentials/*
 
 #Powerpoints
 powerpoints/*
+!/powerpoints/.gitkeep
 
 #Table files
 tables/*
+!/tables/.gitkeep
 
 #JSON files
 jsons/*
+!/jsons/.gitkeep
