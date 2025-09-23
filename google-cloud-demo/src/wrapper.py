@@ -1,6 +1,6 @@
 from google import genai
 import os
-from .config import GEMINI_API_KEY, GOOGLE_API_KEY, PROJECT_ID
+from . import config
 import json
 import re
 import sys
@@ -10,9 +10,11 @@ import pandas as pd
 
 # Helper Method to create Json responses from the AI API response
 def parseResponseData(response):
+    # Parses the information from the response, exlcuding extra text that isn't part of the json format
     json_text_match = re.search(r"\{.*\}", response, re.DOTALL)
     if json_text_match:
         json_text = json_text_match.group(0)
+        # Checks to make sure it is a valid json
         try:
             data = json.loads(json_text)
             print("Parsed Successfully")
@@ -23,6 +25,7 @@ def parseResponseData(response):
         
 # Method to create the Slide deck for the company analysis
 def addSlide(presentation, title, content):
+    # Creates the initial content slide, with no information except the title.
     content_slide = presentation.slide_layouts[1]
     slide = presentation.slides.add_slide(content_slide)
     title_shape = slide.shapes.title
@@ -30,7 +33,7 @@ def addSlide(presentation, title, content):
     title_shape.text = title
     tf = content_placeholder.text_frame
     tf.clear()
-
+    # Adds content to the slide based on the keys from the json.
     if isinstance(content, dict):
         if "overview" in content:
             p = tf.add_paragraph()
@@ -70,7 +73,7 @@ def addSlide(presentation, title, content):
     return slide
 
 # Initializes the ai client being used.
-client = genai.Client(vertexai=True, project=PROJECT_ID, location="global")
+client = genai.Client(vertexai=True, project=config.PROJECT_ID, location="global")
 # Gets the information of the company and its compeitors from the user
 company_name = input("Name of a company: ")
 
@@ -78,7 +81,7 @@ company_name = input("Name of a company: ")
 print("\nChoose output format:")
 print("1. PowerPoint")
 print("2. CSV Table")
-print("3. JSON")
+print("3. JSON\n")
 output_choice = input("Enter your choice (1-3): ").strip()
 
 # Prompt to be used by the AI client
@@ -154,30 +157,33 @@ Do not include extra commentary outside the JSON.
 response = client.models.generate_content(
     model="gemini-2.5-flash", contents=prompt)
 response_text = response.text
-print(response_text)
 # Creates the data from AI response into a json that can be parsed
 analysis_json = parseResponseData(response_text)
-print(json.dumps(analysis_json, indent=2))
-
+# Checks if the json was returned correctly
 if not analysis_json:
     print("Error: could not parse data")
     exit()
-
+# Executes the set of actions corressponding to the input the user gave for the output format.
 if output_choice == "1":
+    # Creates the presentation file
     presentation = Presentation()
+    # Adds the title slide to the presentation based on the company's name
     title_slide = presentation.slide_layouts[0]
     slide = presentation.slides.add_slide(title_slide)
     title = slide.shapes.title
     subtitle = slide.placeholders[1]
     title.text = analysis_json["reportTitle"]
     subtitle.text = analysis_json["analystPersona"]
-
+    # Adds the slides for each slide section in the JSON
     for slide_data in analysis_json["slides"]:
         addSlide(presentation, slide_data["slide_title"], slide_data["content"])
-
+    # Creates the folder to hold the powerpoints the user created
     os.makedirs("powerpoints", exist_ok=True)
+    # Names the slide deck file
     presentation_name = f"{company_name}_analysis.pptx"
+    # Puts the presentation in the associated folder
     file_path = os.path.join("powerpoints", presentation_name)
+    # Saves presentation
     presentation.save(file_path)
     print(f"PowerPoint saved: {presentation_name}")
 
@@ -189,11 +195,12 @@ if output_choice == "1":
         os.system(f'xdg-open "{file_path}"')
 
 elif output_choice == "2":
+    # Creates the rows for the dataframe
     rows = []
     for slide_data in analysis_json["slides"]:
         slide_title = slide_data["slide_title"]
         content = slide_data["content"]
-
+        # Adds the content to the rows based on the keys from the json
         if isinstance(content, dict):
             if "overview" in content:
                 rows.append({"Section": slide_title, "Type": "Overview", "Content": content["overview"]})
@@ -211,20 +218,21 @@ elif output_choice == "2":
                 point = item.get("point") or item.get("recommendation")
                 details = item.get("details") or item.get("action")
                 rows.append({"Section": slide_title, "Type": "Point", "Content": f"{point}: {details}"})
-
+    # Creates the data frame
     df = pd.DataFrame(rows)
     os.makedirs("tables", exist_ok=True)
     csv_name = f"{company_name}_analysis.csv"
     csv_path = os.path.join("tables", csv_name)
+    # Makes the data frame into a csv file
     df.to_csv(csv_path, index=False)
     print(f"CSV saved: {csv_name}")
-    print(f"\nPreview:")
-    print(df.head(10))
 
 elif output_choice == "3":
-    os.makedirs("json_output", exist_ok=True)
+    # Makes a folder for the json outputs.
+    os.makedirs("jsons", exist_ok=True)
+    # Names the json file
     json_name = f"{company_name}_analysis.json"
-    json_path = os.path.join("json_output", json_name)
+    json_path = os.path.join("jsons", json_name)
     with open(json_path, 'w') as f:
         json.dump(analysis_json, f, indent=2)
     print(f"JSON saved: {json_name}")

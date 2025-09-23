@@ -73,12 +73,13 @@ coverage.xml
 *.ipynb
 
 #Credentials
-credentials/
+credentials/*
 
 #Powerpoints
-powerpoints/
+powerpoints/*
 
 #Table files
-*.csv
-*.xlsx
-*.xls
+tables/*
+
+#JSON files
+jsons/*
